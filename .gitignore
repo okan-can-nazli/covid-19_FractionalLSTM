@@ -1,0 +1,10 @@
+# Ignore all CSV files
+*.csv
+
+# Except a specific one (uncomment if needed)
+# !important_data.csv
+
+# Ignore Python bytecode cache
+__pycache__/
+*.py[cod]
+*$py.class
