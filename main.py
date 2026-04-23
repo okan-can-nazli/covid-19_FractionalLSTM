@@ -2,6 +2,8 @@ from CaputoLstm import LSTMCell
 import pandas as pd
 import numpy as np
 
+import matplotlib.pyplot as plt
+
 ########################################### SET THE DATA SET ###########################################
 df = pd.read_csv("WHO_data.csv")
 
@@ -135,14 +137,25 @@ test_y_seq = np.array(test_y_seq)
 
 test_loss = 0
 
+predictions = []
+expected_values = []
+
 # forward
 for i, window in enumerate(test_x_seq): 
     window_stm_outputs, window_caches = cell.forward_sequence(x_sequence = window, stm_init = np.zeros((STM_SIZE,1)), ltm_init = np.zeros((STM_SIZE,1)))
             
     prediction = cell.predict(window_stm_outputs[-1])  # (16,1) → (1,1)
-    
     error = prediction - test_y_seq[i]         # (1,1) - scalar = (1,1)
-        
+    
+    expected_values.append(test_y_seq[i]) # for matplotlib
+    predictions.append(prediction) # for matplotlib
+
     test_loss += float(error[0][0] ** 2) # error in np 2d array format
-if (step+1) % 100 == 0:
-    print(f"Test Loss: {test_loss / len(test_x_seq):.8f}")
+
+print(f"Test Loss: {test_loss / len(test_x_seq):.8f}")
+
+
+plt.plot(expected_values, label="actual")
+plt.plot(predictions, label="predicted")
+plt.legend()
+plt.show()
