@@ -59,7 +59,13 @@ test_data = turkey.iloc[646:]  # %20 (161 rows)
 print(len(train_data), len(test_data))
 
 # windowing 
+x_seq = []
+y_seq = []
+
 for i in range(len(train_data)-6):
     window = train_data["New_cases"].iloc[i:i+7]
     x = window.iloc[:6]
     y = window.iloc[6]
+    x_seq.append(x)
+    y_seq.append(y)
+
