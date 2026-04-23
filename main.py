@@ -50,3 +50,16 @@ turkey["New_cases"] = np.log1p(turkey["New_cases"]) # log(x+1) for x = 0 protect
 # Before:   min=0,  max=406,321,  std=28,954
 # After:    min=0.69,  max=11.6,  std=1.36
 
+
+
+########################################### TRAİN ###########################################
+# 80 / 20 rule (807 rows)
+train_data = turkey.iloc[:646] # %80 (646 rows)
+test_data = turkey.iloc[646:]  # %20 (161 rows)
+print(len(train_data), len(test_data))
+
+# windowing 
+for i in range(len(train_data)-6):
+    window = train_data["New_cases"].iloc[i:i+7]
+    x = window.iloc[:6]
+    y = window.iloc[6]
