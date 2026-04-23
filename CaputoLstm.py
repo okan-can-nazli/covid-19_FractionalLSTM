@@ -251,4 +251,4 @@ class LSTMCell:
         
     def predict(self, stm):
         """Translates a hidden state into a final prediction"""
-        return np.dot(self.Wy, stm) + self.by
+        return np.dot(self.Wy, stm) + self.by                       

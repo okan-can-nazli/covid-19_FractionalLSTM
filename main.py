@@ -45,14 +45,13 @@ turkey = turkey.iloc[1:] # remove first day data (2 day gap)
 
 turkey = turkey.sort_values("Date_reported").reset_index(drop=True) # reset index of the data table
 
-########################################### NORMALİZATİON ###########################################
+########################################### NORMALIZATION ###########################################
 turkey["New_cases"] = np.log1p(turkey["New_cases"]) # log(x+1) for x = 0 protection
 # Before:   min=0,  max=406,321,  std=28,954
 # After:    min=0.69,  max=11.6,  std=1.36
 
 
-
-########################################### TRAİN ###########################################
+########################################### TRAIN ###########################################
 # 80 / 20 rule (807 rows)
 train_data = turkey.iloc[:646] # %80 (646 rows)
 test_data = turkey.iloc[646:]  # %20 (161 rows)
@@ -78,14 +77,15 @@ window_y_seq = np.array(window_y_seq)
 
 #! CONSTANTS
 np.random.seed(42)
-SİGMA = 1
-STM_SİZE = 16
-epochs = 1000
+SIGMA = 1
+STM_SIZE = 16
+epochs = 5000
+
+print("Starting to train....")
+print(f"\n===== SIGMA: {SIGMA} =====")
 
 # init cell
-cell = LSTMCell(input_size = 1,stm_size = STM_SİZE,output_size = 1) #! input_size means multivariate data!!!
-
-print(SİGMA)
+cell = LSTMCell(input_size = 1,stm_size = STM_SIZE,output_size = 1) #! input_size means multivariate data!!!
 
 for step in range(epochs):
     
@@ -97,20 +97,52 @@ for step in range(epochs):
     
     # forward
     for i, window in enumerate(window_x_seq): 
-        window_stm_outputs, window_caches = cell.forward_sequence(x_sequence = window, stm_init = np.zeros((STM_SİZE,1)), ltm_init = np.zeros((STM_SİZE,1)))
+        window_stm_outputs, window_caches = cell.forward_sequence(x_sequence = window, stm_init = np.zeros((STM_SIZE,1)), ltm_init = np.zeros((STM_SIZE,1)))
                 
         
         prediction = cell.predict(window_stm_outputs[-1])  # (16,1) → (1,1)
         error = prediction - window_y_seq[i]         # (1,1) - scalar = (1,1)
         
-        total_loss += float(error[0][0] ** 2)
+        total_loss += float(error[0][0] ** 2) # error in np 2d array format
         
         #calculate mse
         dy_preds = [np.zeros((1, 1))] * 5 + [error] #! its why we only use last stm set to make a prediciton and other 5 only effect backward_sequence
         
         # backward
-        accumulated_grads = cell.backward_sequence(dy_preds=dy_preds, stm_outputs=window_stm_outputs, caches=window_caches,sigma=SİGMA)
+        accumulated_grads = cell.backward_sequence(dy_preds=dy_preds, stm_outputs=window_stm_outputs, caches=window_caches,sigma=SIGMA)
         cell.update_weights(grads=accumulated_grads, learning_rate=0.01)
         
     if (step+1) % 100 == 0:
-        print(f"step {step} Loss: {total_loss / len(window_x_seq):.4f}")
+        print(f"step {step+1} Loss: {total_loss / len(window_x_seq):.8f}")
+        
+########################################### TESTING ###########################################
+print("Starting to testing...")
+
+test_x_seq = []
+test_y_seq = []
+
+for i in range(len(test_data)-6):
+    window = test_data["New_cases"].iloc[i:i+7]
+    x = window.iloc[:6]
+    y = window.iloc[6]
+    test_x_seq.append(x)
+    test_y_seq.append(y)
+    
+# our cell expects np arrays
+test_x_seq = np.array(test_x_seq)
+test_y_seq = np.array(test_y_seq)
+
+
+test_loss = 0
+
+# forward
+for i, window in enumerate(test_x_seq): 
+    window_stm_outputs, window_caches = cell.forward_sequence(x_sequence = window, stm_init = np.zeros((STM_SIZE,1)), ltm_init = np.zeros((STM_SIZE,1)))
+            
+    prediction = cell.predict(window_stm_outputs[-1])  # (16,1) → (1,1)
+    
+    error = prediction - test_y_seq[i]         # (1,1) - scalar = (1,1)
+        
+    test_loss += float(error[0][0] ** 2) # error in np 2d array format
+if (step+1) % 100 == 0:
+    print(f"Test Loss: {test_loss / len(test_x_seq):.8f}")
