@@ -81,7 +81,7 @@ window_y_seq = np.array(window_y_seq)
 np.random.seed(42)
 SIGMA = 1
 STM_SIZE = 16
-epochs = 5000
+epochs = 1000
 
 print("Starting to train....")
 print(f"\n===== SIGMA: {SIGMA} =====")
@@ -148,8 +148,7 @@ for i, window in enumerate(test_x_seq):
     error = prediction - test_y_seq[i]         # (1,1) - scalar = (1,1)
     
     expected_values.append(test_y_seq[i]) # for matplotlib
-    predictions.append(prediction) # for matplotlib
-
+    predictions.append(float(prediction[0][0]))
     test_loss += float(error[0][0] ** 2) # error in np 2d array format
 
 print(f"Test Loss: {test_loss / len(test_x_seq):.8f}")
