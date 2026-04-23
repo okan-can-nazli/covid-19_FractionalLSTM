@@ -45,7 +45,7 @@ turkey = turkey.iloc[1:] # remove first day data (2 day gap)
 
 turkey = turkey.sort_values("Date_reported").reset_index(drop=True) # reset index of the data table
 
-########################################### NORMALIZATİON ###########################################
+########################################### NORMALİZATİON ###########################################
 turkey["New_cases"] = np.log1p(turkey["New_cases"]) # log(x+1) for x = 0 protection
 # Before:   min=0,  max=406,321,  std=28,954
 # After:    min=0.69,  max=11.6,  std=1.36
@@ -56,16 +56,61 @@ turkey["New_cases"] = np.log1p(turkey["New_cases"]) # log(x+1) for x = 0 protect
 # 80 / 20 rule (807 rows)
 train_data = turkey.iloc[:646] # %80 (646 rows)
 test_data = turkey.iloc[646:]  # %20 (161 rows)
-print(len(train_data), len(test_data))
+# print(len(train_data), len(test_data))
 
 # windowing 
-x_seq = []
-y_seq = []
+window_x_seq = []
+window_y_seq = []
 
 for i in range(len(train_data)-6):
     window = train_data["New_cases"].iloc[i:i+7]
     x = window.iloc[:6]
     y = window.iloc[6]
-    x_seq.append(x)
-    y_seq.append(y)
+    window_x_seq.append(x)
+    window_y_seq.append(y)
 
+
+# our cell expects np arrays
+window_x_seq = np.array(window_x_seq)
+window_y_seq = np.array(window_y_seq)
+
+
+
+#! CONSTANTS
+np.random.seed(42)
+SİGMA = 1
+STM_SİZE = 16
+epochs = 1000
+
+# init cell
+cell = LSTMCell(input_size = 1,stm_size = STM_SİZE,output_size = 1) #! input_size means multivariate data!!!
+
+print(SİGMA)
+
+for step in range(epochs):
+    
+    total_loss = 0
+    
+    window_outputs = []
+    dy_preds = []
+    window_caches = []
+    
+    # forward
+    for i, window in enumerate(window_x_seq): 
+        window_stm_outputs, window_caches = cell.forward_sequence(x_sequence = window, stm_init = np.zeros((STM_SİZE,1)), ltm_init = np.zeros((STM_SİZE,1)))
+                
+        
+        prediction = cell.predict(window_stm_outputs[-1])  # (16,1) → (1,1)
+        error = prediction - window_y_seq[i]         # (1,1) - scalar = (1,1)
+        
+        total_loss += float(error[0][0] ** 2)
+        
+        #calculate mse
+        dy_preds = [np.zeros((1, 1))] * 5 + [error] #! its why we only use last stm set to make a prediciton and other 5 only effect backward_sequence
+        
+        # backward
+        accumulated_grads = cell.backward_sequence(dy_preds=dy_preds, stm_outputs=window_stm_outputs, caches=window_caches,sigma=SİGMA)
+        cell.update_weights(grads=accumulated_grads, learning_rate=0.01)
+        
+    if (step+1) % 100 == 0:
+        print(f"step {step} Loss: {total_loss / len(window_x_seq):.4f}")
