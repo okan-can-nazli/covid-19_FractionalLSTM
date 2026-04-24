@@ -1,6 +1,6 @@
 # Ignore all CSV files
 *.csv
-*.txt
+
 # Except a specific one (uncomment if needed)
 # !important_data.csv
 
