@@ -1,4 +1,3 @@
-/COVİD-LSTM/main.py"
 Starting to train....
 
 ===== SIGMA: 1.0 =====
