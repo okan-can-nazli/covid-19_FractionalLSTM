@@ -87,7 +87,7 @@ for SIGMA in [1.0, 0.9, 0.8, 0.7]:
     epochs = 5000
 
     print("Starting to train....")
-    print(f"\n===== SIGMA: {SIGMA} =====")
+    print(f"===== SIGMA: {SIGMA} =====")
 
     # init cell
     cell = LSTMCell(input_size = 1,stm_size = STM_SIZE,output_size = 1) #! input_size means multivariate data!!!
