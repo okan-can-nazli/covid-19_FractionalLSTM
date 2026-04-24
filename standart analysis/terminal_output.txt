@@ -1,3 +1,4 @@
+/COVİD-LSTM/main.py"
 Starting to train....
 
 ===== SIGMA: 1.0 =====
@@ -51,58 +52,8 @@ step 4700 Loss: 0.01677662
 step 4800 Loss: 0.01676453
 step 4900 Loss: 0.01671368
 step 5000 Loss: 0.01667041
-step 5100 Loss: 0.01662900
-step 5200 Loss: 0.01658902
-step 5300 Loss: 0.01655172
-step 5400 Loss: 0.01651793
-step 5500 Loss: 0.01648714
-step 5600 Loss: 0.01645844
-step 5700 Loss: 0.01643151
-step 5800 Loss: 0.01640803
-step 5900 Loss: 0.01638898
-step 6000 Loss: 0.01637184
-step 6100 Loss: 0.01635670
-step 6200 Loss: 0.01635563
-step 6300 Loss: 0.01681290
-step 6400 Loss: 0.01687059
-step 6500 Loss: 0.01672664
-step 6600 Loss: 0.01641140
-step 6700 Loss: 0.01631238
-step 6800 Loss: 0.01624740
-step 6900 Loss: 0.01622965
-step 7000 Loss: 0.01622081
-step 7100 Loss: 0.01621339
-step 7200 Loss: 0.01620702
-step 7300 Loss: 0.01620495
-step 7400 Loss: 0.01620812
-step 7500 Loss: 0.01620764
-step 7600 Loss: 0.01619900
-step 7700 Loss: 0.01618466
-step 7800 Loss: 0.01616705
-step 7900 Loss: 0.01614946
-step 8000 Loss: 0.01613878
-step 8100 Loss: 0.01614040
-step 8200 Loss: 0.01614836
-step 8300 Loss: 0.01613926
-step 8400 Loss: 0.01611765
-step 8500 Loss: 0.01609732
-step 8600 Loss: 0.01607520
-step 8700 Loss: 0.01605390
-step 8800 Loss: 0.01603366
-step 8900 Loss: 0.01601434
-step 9000 Loss: 0.01599639
-step 9100 Loss: 0.01597976
-step 9200 Loss: 0.01596393
-step 9300 Loss: 0.01601033
-step 9400 Loss: 0.01592774
-step 9500 Loss: 0.01591460
-step 9600 Loss: 0.01590789
-step 9700 Loss: 0.01590060
-step 9800 Loss: 0.01618146
-step 9900 Loss: 0.01599810
-step 10000 Loss: 0.01587180
 Starting to testing...
-Test Loss: 0.14728125
+Test Loss: 0.22626246
 Starting to train....
 
 ===== SIGMA: 0.9 =====
@@ -156,58 +107,8 @@ step 4700 Loss: 0.01832849
 step 4800 Loss: 0.01831682
 step 4900 Loss: 0.01830526
 step 5000 Loss: 0.01829391
-step 5100 Loss: 0.01828285
-step 5200 Loss: 0.01827207
-step 5300 Loss: 0.01826159
-step 5400 Loss: 0.01825146
-step 5500 Loss: 0.01824184
-step 5600 Loss: 0.01823293
-step 5700 Loss: 0.01822493
-step 5800 Loss: 0.01821788
-step 5900 Loss: 0.01821165
-step 6000 Loss: 0.01820603
-step 6100 Loss: 0.01820079
-step 6200 Loss: 0.01819578
-step 6300 Loss: 0.01819085
-step 6400 Loss: 0.01818593
-step 6500 Loss: 0.01818096
-step 6600 Loss: 0.01817591
-step 6700 Loss: 0.01817076
-step 6800 Loss: 0.01816550
-step 6900 Loss: 0.01816013
-step 7000 Loss: 0.01815461
-step 7100 Loss: 0.01814894
-step 7200 Loss: 0.01814308
-step 7300 Loss: 0.01813698
-step 7400 Loss: 0.01813058
-step 7500 Loss: 0.01812379
-step 7600 Loss: 0.01811653
-step 7700 Loss: 0.01810865
-step 7800 Loss: 0.01810000
-step 7900 Loss: 0.01809037
-step 8000 Loss: 0.01807949
-step 8100 Loss: 0.01806703
-step 8200 Loss: 0.01805255
-step 8300 Loss: 0.01803547
-step 8400 Loss: 0.01801502
-step 8500 Loss: 0.01799014
-step 8600 Loss: 0.01795933
-step 8700 Loss: 0.01792041
-step 8800 Loss: 0.01787018
-step 8900 Loss: 0.01780458
-step 9000 Loss: 0.01772373
-step 9100 Loss: 0.01768660
-step 9200 Loss: 0.01797783
-step 9300 Loss: 0.01825665
-step 9400 Loss: 0.01832631
-step 9500 Loss: 0.01831234
-step 9600 Loss: 0.01825903
-step 9700 Loss: 0.01819381
-step 9800 Loss: 0.01813500
-step 9900 Loss: 0.01808678
-step 10000 Loss: 0.01804686
 Starting to testing...
-Test Loss: 0.14962936
+Test Loss: 0.20698559
 Starting to train....
 
 ===== SIGMA: 0.8 =====
@@ -261,58 +162,8 @@ step 4700 Loss: 0.01826180
 step 4800 Loss: 0.01821042
 step 4900 Loss: 0.01815751
 step 5000 Loss: 0.01810217
-step 5100 Loss: 0.01804558
-step 5200 Loss: 0.01799009
-step 5300 Loss: 0.01793862
-step 5400 Loss: 0.01789381
-step 5500 Loss: 0.01786400
-step 5600 Loss: 0.01787302
-step 5700 Loss: 0.01802826
-step 5800 Loss: 0.01824634
-step 5900 Loss: 0.01823402
-step 6000 Loss: 0.01809994
-step 6100 Loss: 0.01798828
-step 6200 Loss: 0.01791516
-step 6300 Loss: 0.01785847
-step 6400 Loss: 0.01780712
-step 6500 Loss: 0.01775870
-step 6600 Loss: 0.01771256
-step 6700 Loss: 0.01766843
-step 6800 Loss: 0.01762585
-step 6900 Loss: 0.01758408
-step 7000 Loss: 0.01754261
-step 7100 Loss: 0.01750271
-step 7200 Loss: 0.01746823
-step 7300 Loss: 0.01744643
-step 7400 Loss: 0.01742102
-step 7500 Loss: 0.01740014
-step 7600 Loss: 0.01738144
-step 7700 Loss: 0.01735647
-step 7800 Loss: 0.01732429
-step 7900 Loss: 0.01728669
-step 8000 Loss: 0.01725094
-step 8100 Loss: 0.01722652
-step 8200 Loss: 0.01721465
-step 8300 Loss: 0.01720526
-step 8400 Loss: 0.01719199
-step 8500 Loss: 0.01717526
-step 8600 Loss: 0.01715590
-step 8700 Loss: 0.01713344
-step 8800 Loss: 0.01710615
-step 8900 Loss: 0.01707220
-step 9000 Loss: 0.01703241
-step 9100 Loss: 0.01699107
-step 9200 Loss: 0.01695213
-step 9300 Loss: 0.01691585
-step 9400 Loss: 0.01688018
-step 9500 Loss: 0.01684595
-step 9600 Loss: 0.01681564
-step 9700 Loss: 0.01679010
-step 9800 Loss: 0.01676874
-step 9900 Loss: 0.01675053
-step 10000 Loss: 0.01673447
 Starting to testing...
-Test Loss: 0.15998232
+Test Loss: 0.29380519
 Starting to train....
 
 ===== SIGMA: 0.7 =====
@@ -366,55 +217,5 @@ step 4700 Loss: 0.01682734
 step 4800 Loss: 0.01685426
 step 4900 Loss: 0.01688892
 step 5000 Loss: 0.01696367
-step 5100 Loss: 0.01722545
-step 5200 Loss: 0.01711728
-step 5300 Loss: 0.01707198
-step 5400 Loss: 0.01692831
-step 5500 Loss: 0.01687836
-step 5600 Loss: 0.01684067
-step 5700 Loss: 0.01682561
-step 5800 Loss: 0.01680286
-step 5900 Loss: 0.01680488
-step 6000 Loss: 0.01677249
-step 6100 Loss: 0.01668355
-step 6200 Loss: 0.01696706
-step 6300 Loss: 0.01645932
-step 6400 Loss: 0.01628127
-step 6500 Loss: 0.01695052
-step 6600 Loss: 0.01605088
-step 6700 Loss: 0.01667949
-step 6800 Loss: 0.01608975
-step 6900 Loss: 0.01645011
-step 7000 Loss: 0.01622065
-step 7100 Loss: 0.01623417
-step 7200 Loss: 0.01623627
-step 7300 Loss: 0.01619182
-step 7400 Loss: 0.01618792
-step 7500 Loss: 0.01618401
-step 7600 Loss: 0.01618083
-step 7700 Loss: 0.01617226
-step 7800 Loss: 0.01613961
-step 7900 Loss: 0.01623656
-step 8000 Loss: 0.01627953
-step 8100 Loss: 0.01633955
-step 8200 Loss: 0.01638643
-step 8300 Loss: 0.01645925
-step 8400 Loss: 0.01639597
-step 8500 Loss: 0.01640510
-step 8600 Loss: 0.01644197
-step 8700 Loss: 0.01653132
-step 8800 Loss: 0.01673531
-step 8900 Loss: 0.01656033
-step 9000 Loss: 0.01669830
-step 9100 Loss: 0.01650141
-step 9200 Loss: 0.01636290
-step 9300 Loss: 0.01639626
-step 9400 Loss: 0.01637308
-step 9500 Loss: 0.01638554
-step 9600 Loss: 0.01649220
-step 9700 Loss: 0.01754279
-step 9800 Loss: 0.05053789
-step 9900 Loss: 0.01976027
-step 10000 Loss: 0.01958863
 Starting to testing...
-Test Loss: 0.30755995
+Test Loss: 0.15814055
