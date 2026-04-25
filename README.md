@@ -1,7 +1,7 @@
 ## Data
 
 WHO COVID-19 global dataset. Download from:
-https://covid19.who.int/data
+https://data.who.int/dashboards/covid19/data
 
 Save as `WHO-COVID-19-global-daily-data.csv` in the project root.
 
