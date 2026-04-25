@@ -81,15 +81,16 @@ window_y_seq = np.array(window_y_seq)
 
 
 #! CONSTANTS
-#np.random.seed(42)
-SIGMA = 1
+seed_num = 42
+np.random.seed(seed_num)
+SIGMA = 0.6
 STM_SIZE = 16
-EPOCHS = 1000
-
+EPOCHS = 5000
+lr = 0.01
 
 
 print("Starting to train....")
-print(f"===== SIGMA: {SIGMA} =====")
+print(f"Constants:\nNumpy Random Seed: {seed_num if seed_num is not None else 'Unset (Random)'}\nSTM Size: {STM_SIZE}\nLearning Rate: {lr}")print(f"===== SIGMA: {SIGMA} =====")
 
 # init cell
 cell = LSTMCell(input_size = 1,stm_size = STM_SIZE,output_size = 1) #! input_size means multivariate data!!!
@@ -113,8 +114,6 @@ for step in range(EPOCHS):
     for i, window in enumerate(window_x_seq): 
         window_stm_outputs, window_caches = cell.forward_sequence(x_sequence = window, stm_init = np.zeros((STM_SIZE, 1)), ltm_init = np.zeros((STM_SIZE, 1)))
         
-        stm_state = window_stm_outputs[-1]
-        ltm_state = window_caches[-1][6]  # last cache, ltm_next
         
         prediction = cell.predict(window_stm_outputs[-1])  # (16,1) → (1,1)
         error = prediction - window_y_seq[i]         # (1,1) - scalar = (1,1)
@@ -129,7 +128,7 @@ for step in range(EPOCHS):
         
         # backward
         accumulated_grads = cell.backward_sequence(dy_preds=dy_preds, stm_outputs=window_stm_outputs, caches=window_caches,sigma=SIGMA)
-        cell.update_weights(grads=accumulated_grads, learning_rate=0.01)
+        cell.update_weights(grads=accumulated_grads, learning_rate=lr)
         
     if (step+1) % 100 == 0:
         print(f"step {step+1} Loss: {total_loss / len(window_x_seq):.8f}")
@@ -174,8 +173,6 @@ test_expected_values = []
 # forward
 for i, window in enumerate(test_x_seq): 
     window_stm_outputs, window_caches = cell.forward_sequence(x_sequence = window, stm_init = np.zeros((STM_SIZE, 1)), ltm_init = np.zeros((STM_SIZE, 1)))    
-    stm_state = window_stm_outputs[-1]
-    ltm_state = window_caches[-1][6]
     
     prediction = cell.predict(window_stm_outputs[-1])  # (16,1) → (1,1)
     error = prediction - test_y_seq[i]         # (1,1) - scalar = (1,1)

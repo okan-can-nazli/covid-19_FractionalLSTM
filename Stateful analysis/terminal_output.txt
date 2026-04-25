@@ -1,5 +1,5 @@
-Starting to train....
 
+Starting to train....
 ===== SIGMA: 1.0 =====
 step 100 Loss: 0.02399283
 step 200 Loss: 0.02183257
@@ -53,8 +53,8 @@ step 4900 Loss: 0.01644582
 step 5000 Loss: 0.01645522
 Starting to testing...
 Test Loss: 0.52045333
-Starting to train....
 
+Starting to train....
 ===== SIGMA: 0.9 =====
 step 100 Loss: 0.02684584
 step 200 Loss: 0.02503802
@@ -163,8 +163,8 @@ step 4900 Loss: 0.01800074
 step 5000 Loss: 0.01794092
 Starting to testing...
 Test Loss: 0.31804356
-Starting to train....
 
+Starting to train....
 ===== SIGMA: 0.7 =====
 step 100 Loss: 0.02816361
 step 200 Loss: 0.02730068

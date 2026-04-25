@@ -1,5 +1,5 @@
-Starting to train....
 
+Starting to train....
 ===== SIGMA: 1.0 =====
 step 100 Loss: 0.02462152
 step 200 Loss: 0.02308125
@@ -53,8 +53,8 @@ step 4900 Loss: 0.01671368
 step 5000 Loss: 0.01667041
 Starting to testing...
 Test Loss: 0.22626246
-Starting to train....
 
+Starting to train....
 ===== SIGMA: 0.9 =====
 step 100 Loss: 0.02558044
 step 200 Loss: 0.02454396
@@ -108,8 +108,8 @@ step 4900 Loss: 0.01830526
 step 5000 Loss: 0.01829391
 Starting to testing...
 Test Loss: 0.20698559
-Starting to train....
 
+Starting to train....
 ===== SIGMA: 0.8 =====
 step 100 Loss: 0.02546667
 step 200 Loss: 0.02473359
@@ -218,3 +218,64 @@ step 4900 Loss: 0.01688892
 step 5000 Loss: 0.01696367
 Starting to testing...
 Test Loss: 0.15814055
+
+Starting to train....
+===== SIGMA: 0.6 =====
+step 100 Loss: 0.02530488
+step 200 Loss: 0.02465037
+step 300 Loss: 0.02328116
+step 400 Loss: 0.02197898
+step 500 Loss: 0.02105084
+step 600 Loss: 0.02047233
+step 700 Loss: 0.02014857
+step 800 Loss: 0.01994021
+step 900 Loss: 0.01979721
+step 1000 Loss: 0.01975623
+step 1100 Loss: 0.01959392
+step 1200 Loss: 0.01957849
+step 1300 Loss: 0.01964006
+step 1400 Loss: 0.01927207
+step 1500 Loss: 0.01920786
+step 1600 Loss: 0.01880791
+step 1700 Loss: 0.01860866
+step 1800 Loss: 0.01935927
+step 1900 Loss: 0.01866329
+step 2000 Loss: 0.01848185
+step 2100 Loss: 0.01845560
+step 2200 Loss: 0.01886926
+step 2300 Loss: 0.01879780
+step 2400 Loss: 0.01849339
+step 2500 Loss: 0.01847335
+step 2600 Loss: 0.01786310
+step 2700 Loss: 0.02505124
+step 2800 Loss: 0.02568255
+step 2900 Loss: 0.02390501
+step 3000 Loss: 0.02464359
+step 3100 Loss: 0.02216842
+step 3200 Loss: 0.02743628
+/home/ocn/Documents/Coding/COVİD-LSTM/CaputoLstm.py:206: RuntimeWarning: invalid value encountered in multiply
+  do_input = do * fractional_derivs['output_gate'][t]
+/home/ocn/Documents/Coding/COVİD-LSTM/CaputoLstm.py:207: RuntimeWarning: invalid value encountered in multiply
+  di_input = di * fractional_derivs['input_gate'][t]
+/home/ocn/Documents/Coding/COVİD-LSTM/CaputoLstm.py:208: RuntimeWarning: invalid value encountered in multiply
+  df_input = df * fractional_derivs['forget_gate'][t]
+step 3300 Loss: nan
+step 3400 Loss: nan
+step 3500 Loss: nan
+step 3600 Loss: nan
+step 3700 Loss: nan
+step 3800 Loss: nan
+step 3900 Loss: nan
+step 4000 Loss: nan
+step 4100 Loss: nan
+step 4200 Loss: nan
+step 4300 Loss: nan
+step 4400 Loss: nan
+step 4500 Loss: nan
+step 4600 Loss: nan
+step 4700 Loss: nan
+step 4800 Loss: nan
+step 4900 Loss: nan
+step 5000 Loss: nan
+Starting to testing...
+Test Loss: nan
