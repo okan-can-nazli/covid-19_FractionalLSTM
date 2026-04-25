@@ -2,7 +2,9 @@
 
 WHO COVID-19 global dataset. Download from:
 https://data.who.int/dashboards/covid19/data
-!Daily frequency reporting of new COVID-19 cases and deaths by date reported to WHO!
+
+Download The .csv file named as:
+Daily frequency reporting of new COVID-19 cases and deaths by date reported to WHO
 
 Save as `WHO-COVID-19-global-daily-data.csv` in the project root.
 
