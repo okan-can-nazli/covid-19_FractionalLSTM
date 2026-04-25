@@ -83,14 +83,14 @@ window_y_seq = np.array(window_y_seq)
 #! CONSTANTS
 seed_num = 42
 np.random.seed(seed_num)
-SIGMA = 0.6
+SIGMA = 1
 STM_SIZE = 16
 EPOCHS = 5000
 lr = 0.01
 
 
 print("Starting to train....")
-print(f"Constants:\nNumpy Random Seed: {seed_num if seed_num is not None else 'Unset (Random)'}\nSTM Size: {STM_SIZE}\nLearning Rate: {lr}")print(f"===== SIGMA: {SIGMA} =====")
+print(f"===== Constants =====\nNumpy Random Seed: {seed_num if seed_num is not None else 'Unset (Random)'}\nSTM Size: {STM_SIZE}\nLearning Rate: {lr}\nSIGMA:{SIGMA}")
 
 # init cell
 cell = LSTMCell(input_size = 1,stm_size = STM_SIZE,output_size = 1) #! input_size means multivariate data!!!

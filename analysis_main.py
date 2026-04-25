@@ -89,9 +89,8 @@ for SIGMA in [1.0, 0.9, 0.8, 0.7]:
     lr = 0.01
     
     print("Starting to train....")
-    print(f"Constants:\nNumpy Random Seed: {seed_num if seed_num is not None else 'Unset (Random)'}\nSTM Size: {STM_SIZE}\nLearning Rate: {lr}")
+    print(f"===== Constants =====\nNumpy Random Seed: {seed_num if seed_num is not None else 'Unset (Random)'}\nSTM Size: {STM_SIZE}\nLearning Rate: {lr}\nSIGMA:{SIGMA}")
 
-    print(f"===== SIGMA: {SIGMA} =====")
 
     # init cell
     cell = LSTMCell(input_size = 1,stm_size = STM_SIZE,output_size = 1) #! input_size means multivariate data!!!
