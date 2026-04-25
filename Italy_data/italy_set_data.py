@@ -4,7 +4,7 @@ import numpy as np
 def get_data():
 
     ########################################### SET THE DATA SET ###########################################
-    df = pd.read_csv("WHO_data.csv")
+    df = pd.read_csv("WHO-COVID-19-global-daily-data.csv")
 
     italy = df[df["Country"] == "Italy"].copy() # copy just for safety to protect original data,nothing else
     italy = italy[["Date_reported", "New_cases", "Cumulative_cases", "New_deaths", "Cumulative_deaths"]] # only keep usefull columns
@@ -24,9 +24,8 @@ def get_data():
     #[7 days        94 
     # 175 days       1]
 
-
     italy = italy[italy["Date_reported"] > "2020-01-31"] # "2020-01-31" is the first day where FIRST CASE come out
-    italy = italy[italy["Date_reported"] < "2023-11-06"] # "2023-11-06" is the first day of the non-daily data rows
+    italy = italy[italy["Date_reported"] < "2023-10-30"] # "2023-10-30" is the first day of the non-proper data rows (diffrent announcement day gaps & inconsistent data rows)
 
 
     italy = italy.sort_values("Date_reported").reset_index(drop=True) # reset index of the data table
@@ -63,9 +62,10 @@ def get_data():
         window_x_seq.append(x)
         window_y_seq.append(y)
 
-
     # our cell expects np arrays
     window_x_seq = np.array(window_x_seq)
     window_y_seq = np.array(window_y_seq)
     
     return train_data, test_data, window_x_seq, window_y_seq
+
+

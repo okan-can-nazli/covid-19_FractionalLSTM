@@ -36,7 +36,9 @@ EPOCHS = 5000
 lr = 0.01
 
 #! Enter lib of the country 
-from Italy_data.italy_set_data import get_data
+#from Italy_data.italy_set_data import get_data
+from Türkiye_data.turkey_set_data import get_data
+
 
 train_data, test_data, window_x_seq, window_y_seq = get_data()
 

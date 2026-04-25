@@ -3,7 +3,7 @@ import numpy as np
 
 def get_data():
     ########################################### SET THE DATA SET ###########################################
-    df = pd.read_csv("WHO_data.csv")
+    df = pd.read_csv("WHO-COVID-19-global-daily-data.csv")
 
     turkey = df[df["Country"] == "Türkiye"].copy() # copy just for safety to protect original data,nothing else
     turkey = turkey[["Date_reported", "New_cases", "Cumulative_cases", "New_deaths", "Cumulative_deaths"]] # only keep usefull columns

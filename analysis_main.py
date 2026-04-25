@@ -29,11 +29,13 @@ seed_num = 42
 np.random.seed(seed_num)
 #SIGMA = 1
 STM_SIZE = 16
-EPOCHS = 5000
+EPOCHS = 10
 lr = 0.01
 
 #! Enter lib of the country 
 from Türkiye_data.turkey_set_data import get_data
+#from Italy_data.italy_set_data import get_data
+
 
 train_data, test_data, window_x_seq, window_y_seq = get_data()
 
