@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 def create_result_graph(name, dates, expected_real, predictions_real):
 # Set a cleaner style and stretch the figure horizontally
     plt.style.use('seaborn-v0_8-whitegrid')
-    plt.figure(figsize=(14, 6), dpi=120)
+    plt.figure(figsize=(14, 6), dpi=300)
 
     plt.title(f"{name} Data Sigma: {SIGMA}", fontsize=14)
 
@@ -29,12 +29,12 @@ seed_num = 42
 np.random.seed(seed_num)
 #SIGMA = 1
 STM_SIZE = 16
-EPOCHS = 10
+EPOCHS = 5000
 lr = 0.01
 
 #! Enter lib of the country 
-from Türkiye_data.turkey_set_data import get_data
-#from Italy_data.italy_set_data import get_data
+#from Türkiye_data.turkey_set_data import get_data
+from Italy_data.italy_set_data import get_data
 
 
 train_data, test_data, window_x_seq, window_y_seq = get_data()

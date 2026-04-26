@@ -8,7 +8,7 @@ def create_result_graph(name, dates, expected_real, predictions_real):
     
 # Set a cleaner style and stretch the figure horizontally
     plt.style.use('seaborn-v0_8-whitegrid')
-    plt.figure(figsize=(14, 6), dpi=120)
+    plt.figure(figsize=(14, 6), dpi=300)
 
     plt.title(f"{name} Data Sigma: {SIGMA}", fontsize=14)
 
