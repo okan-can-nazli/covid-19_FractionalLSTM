@@ -1,0 +1,235 @@
+Starting to train....
+===== Constants =====
+Numpy Random Seed: 42
+STM Size: 16
+Learning Rate: 0.01
+SIGMA:1.0
+step 100 Loss: 0.10219878
+step 200 Loss: 0.10112533
+step 300 Loss: 0.10068618
+step 400 Loss: 0.09961460
+step 500 Loss: 0.09768009
+step 600 Loss: 0.09601174
+step 700 Loss: 0.09506679
+step 800 Loss: 0.09417121
+step 900 Loss: 0.09296357
+step 1000 Loss: 0.09139243
+step 1100 Loss: 0.09051777
+step 1200 Loss: 0.08994261
+step 1300 Loss: 0.08958230
+step 1400 Loss: 0.08915492
+step 1500 Loss: 0.08886839
+step 1600 Loss: 0.08781795
+step 1700 Loss: 0.08719172
+step 1800 Loss: 0.08695835
+step 1900 Loss: 0.08592187
+step 2000 Loss: 0.08503070
+step 2100 Loss: 0.08450838
+step 2200 Loss: 0.08409559
+step 2300 Loss: 0.08366437
+step 2400 Loss: 0.08347094
+step 2500 Loss: 0.08330915
+step 2600 Loss: 0.08317305
+step 2700 Loss: 0.08331543
+step 2800 Loss: 0.08345314
+step 2900 Loss: 0.08371340
+step 3000 Loss: 0.08466299
+step 3100 Loss: 0.08495682
+step 3200 Loss: 0.08490498
+step 3300 Loss: 0.08378009
+step 3400 Loss: 0.08274225
+step 3500 Loss: 0.08284739
+step 3600 Loss: 0.08298568
+step 3700 Loss: 0.08312631
+step 3800 Loss: 0.08219352
+step 3900 Loss: 0.08216993
+step 4000 Loss: 0.08211602
+step 4100 Loss: 0.08147636
+step 4200 Loss: 0.08121937
+step 4300 Loss: 0.08124607
+step 4400 Loss: 0.08098798
+step 4500 Loss: 0.08072301
+step 4600 Loss: 0.08012668
+step 4700 Loss: 0.07928784
+step 4800 Loss: 0.07928923
+step 4900 Loss: 0.08493934
+step 5000 Loss: 0.08445115
+Starting to testing...
+Test Loss: 0.50587077
+
+Starting to train....
+===== Constants =====
+Numpy Random Seed: 42
+STM Size: 16
+Learning Rate: 0.01
+SIGMA:0.9
+step 100 Loss: 0.10082005
+step 200 Loss: 0.10002508
+step 300 Loss: 0.09962774
+step 400 Loss: 0.09915854
+step 500 Loss: 0.09875315
+step 600 Loss: 0.09838021
+step 700 Loss: 0.09800924
+step 800 Loss: 0.09762457
+step 900 Loss: 0.09721830
+step 1000 Loss: 0.09678428
+step 1100 Loss: 0.09632262
+step 1200 Loss: 0.09584664
+step 1300 Loss: 0.09536289
+step 1400 Loss: 0.09487143
+step 1500 Loss: 0.09442353
+step 1600 Loss: 0.09403710
+step 1700 Loss: 0.09369402
+step 1800 Loss: 0.09338549
+step 1900 Loss: 0.09312042
+step 2000 Loss: 0.09290151
+step 2100 Loss: 0.09272423
+step 2200 Loss: 0.09258346
+step 2300 Loss: 0.09247736
+step 2400 Loss: 0.09239517
+step 2500 Loss: 0.09230835
+step 2600 Loss: 0.09220368
+step 2700 Loss: 0.09208825
+step 2800 Loss: 0.09197511
+step 2900 Loss: 0.09185488
+step 3000 Loss: 0.09172039
+step 3100 Loss: 0.09163377
+step 3200 Loss: 0.09157170
+step 3300 Loss: 0.09150815
+step 3400 Loss: 0.09144180
+step 3500 Loss: 0.09137051
+step 3600 Loss: 0.09128715
+step 3700 Loss: 0.09119130
+step 3800 Loss: 0.09109110
+step 3900 Loss: 0.09099049
+step 4000 Loss: 0.09088692
+step 4100 Loss: 0.09077569
+step 4200 Loss: 0.09065146
+step 4300 Loss: 0.09050780
+step 4400 Loss: 0.09033806
+step 4500 Loss: 0.09014318
+step 4600 Loss: 0.08993579
+step 4700 Loss: 0.08972227
+step 4800 Loss: 0.08955804
+step 4900 Loss: 0.08943089
+step 5000 Loss: 0.08934240
+Starting to testing...
+Test Loss: 0.34289687
+
+Starting to train....
+===== Constants =====
+Numpy Random Seed: 42
+STM Size: 16
+Learning Rate: 0.01
+SIGMA:0.8
+step 100 Loss: 0.10292831
+step 200 Loss: 0.10161382
+step 300 Loss: 0.10068247
+step 400 Loss: 0.09964448
+step 500 Loss: 0.09879398
+step 600 Loss: 0.09778895
+step 700 Loss: 0.09652580
+step 800 Loss: 0.09522729
+step 900 Loss: 0.09417497
+step 1000 Loss: 0.09387616
+step 1100 Loss: 0.09304370
+step 1200 Loss: 0.09206378
+step 1300 Loss: 0.09109954
+step 1400 Loss: 0.09093090
+step 1500 Loss: 0.09227231
+step 1600 Loss: 0.08992035
+step 1700 Loss: 0.08958522
+step 1800 Loss: 0.08912450
+step 1900 Loss: 0.08877108
+step 2000 Loss: 0.08859678
+step 2100 Loss: 0.08857577
+step 2200 Loss: 0.08860179
+step 2300 Loss: 0.08855985
+step 2400 Loss: 0.08841921
+step 2500 Loss: 0.08828464
+step 2600 Loss: 0.08822461
+step 2700 Loss: 0.08822219
+step 2800 Loss: 0.08820356
+step 2900 Loss: 0.08804781
+step 3000 Loss: 0.08790472
+step 3100 Loss: 0.08849133
+step 3200 Loss: 0.08844923
+step 3300 Loss: 0.09199967
+step 3400 Loss: 0.08885134
+step 3500 Loss: 0.08813378
+step 3600 Loss: 0.08802286
+step 3700 Loss: 0.08795171
+step 3800 Loss: 0.08786035
+step 3900 Loss: 0.08774437
+step 4000 Loss: 0.08763698
+step 4100 Loss: 0.08755355
+step 4200 Loss: 0.08750429
+step 4300 Loss: 0.08748071
+step 4400 Loss: 0.08745249
+step 4500 Loss: 0.08741143
+step 4600 Loss: 0.08733490
+step 4700 Loss: 0.08718272
+step 4800 Loss: 0.08695916
+step 4900 Loss: 0.08682427
+step 5000 Loss: 0.08673653
+Starting to testing...
+Test Loss: 0.39677896
+
+Starting to train....
+===== Constants =====
+Numpy Random Seed: 42
+STM Size: 16
+Learning Rate: 0.01
+SIGMA:0.7
+step 100 Loss: 0.10413180
+step 200 Loss: 0.10293364
+step 300 Loss: 0.10190965
+step 400 Loss: 0.10059887
+step 500 Loss: 0.09937624
+step 600 Loss: 0.09749789
+step 700 Loss: 0.09483686
+step 800 Loss: 0.09242368
+step 900 Loss: 0.09366203
+step 1000 Loss: 0.09529026
+step 1100 Loss: 0.09246904
+step 1200 Loss: 0.09125723
+step 1300 Loss: 0.09148517
+step 1400 Loss: 0.09436573
+step 1500 Loss: 0.08585097
+step 1600 Loss: 0.08941360
+step 1700 Loss: 0.08700137
+step 1800 Loss: 0.08898534
+step 1900 Loss: 0.08748902
+step 2000 Loss: 0.08718196
+step 2100 Loss: 0.08460437
+step 2200 Loss: 0.09105134
+step 2300 Loss: 0.08708554
+step 2400 Loss: 0.08330659
+step 2500 Loss: 0.08756473
+step 2600 Loss: 0.08752943
+step 2700 Loss: 0.09008734
+step 2800 Loss: 0.08697210
+step 2900 Loss: 0.08708536
+step 3000 Loss: 0.08787226
+step 3100 Loss: 0.08874244
+step 3200 Loss: 0.08637106
+step 3300 Loss: 0.08569624
+step 3400 Loss: 0.08549282
+step 3500 Loss: 0.08501767
+step 3600 Loss: 0.08445829
+step 3700 Loss: 0.08416966
+step 3800 Loss: 0.08398435
+step 3900 Loss: 0.08395119
+step 4000 Loss: 0.08404583
+step 4100 Loss: 0.08390313
+step 4200 Loss: 0.08375803
+step 4300 Loss: 0.08282343
+step 4400 Loss: 0.08271522
+step 4500 Loss: 0.08543973
+step 4600 Loss: 0.08221773
+step 4700 Loss: 0.08337132
+step 4800 Loss: 0.08553107
+step 4900 Loss: 0.08805390
+step 5000 Loss: 0.08727961
+Starting to testing...
+Test Loss: 0.40453737

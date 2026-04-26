@@ -25,8 +25,8 @@ def get_data():
     # 175 days       1]
 
     italy = italy[italy["Date_reported"] > "2020-01-31"] # "2020-01-31" is the first day where FIRST CASE come out
-    italy = italy[italy["Date_reported"] < "2023-10-30"] # "2023-10-30" is the first day of the non-proper data rows (diffrent announcement day gaps & inconsistent data rows)
-
+    italy = italy[italy["Date_reported"] < "2023-01-01"] # "2023-10-30" is the first day of the non-proper data rows (diffrent announcement day gaps & inconsistent data rows)
+    # data before 2023 is so much cleaner 
 
     italy = italy.sort_values("Date_reported").reset_index(drop=True) # reset index of the data table
 
